@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <form action="/" method="post" autocomplete="off">
+    <p>{{message}}</p>
+    <label for="user">Username</label>
+    <input type="text" name="user">
+    <label for="pass">Password</label>
+    <input type="text" name="pass">
+    <button type="submit">login</button>
+    </form>
+{% endblock body %}
