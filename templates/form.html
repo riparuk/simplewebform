@@ -5,11 +5,10 @@
 <form action="/", method="post">
     <label for="choice">Pilihan Anda : </label>
     <select name="choice" required>
-        <option disabled selected hidden>Presiden</option>
-        <option value="Jokowi">Jokowi</option>
-        <option value="Prabowo">Prabowo</option>
-        <option value="Anies">Anies</option>
-        <option value="Ganjar">Ganjar</option>
+        <option disabled selected value="" hidden>Presiden</option>
+        {% for choice in choices %}
+            <option value={{choice}}>{{choice}}</option>
+        {% endfor %}
     </select>
     <br><button type="submit">Submit</button>
 </form>
